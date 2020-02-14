@@ -163,7 +163,8 @@ void MenuAdmin() {
 void MenuOtro() {
 	int opcion3;
 	do {
-		cout << "0. Salir\n1. Comprar Libro\n2. Buscar por Autor\n3. Buscar por Título\n4. Agregar Dinero a mi Cuenta\n5. Restablecer Contraseña\n6. Borrar Cuenta";
+		cout << "0. Salir\n1. Comprar Libro\n2. Buscar por Autor\n3. Buscar por Título\n4. Agregar Dinero a mi Cuenta\n5. Restablecer Contraseña\n6. Borrar Cuenta\nSu Opción: ";
+		cin >> opcion3;
 		switch (opcion3) {
 			case 1: {
 					listarLibros();
