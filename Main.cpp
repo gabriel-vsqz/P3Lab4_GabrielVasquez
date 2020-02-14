@@ -116,9 +116,9 @@ void MenuAdmin() {
 					if (cont_l < 10) {
 						crearLibro();
 						cont_l++;
-						cout << "Nuevo Libro Registrado";
+						cout << "Nuevo Libro Registrado" << endl;
 					} else {
-						cout << "Se ha alcanzado la cantidad máxima de libros registrados";
+						cout << "Se ha alcanzado la cantidad máxima de libros registrados" << endl;
 					}
 				} break;
 			case 2: {
