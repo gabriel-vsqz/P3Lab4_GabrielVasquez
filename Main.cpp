@@ -27,7 +27,6 @@ void Registro() {
 	cin >> password;
 	cout << "Nombre: ";
 	cin >> name;
-	cin;
 	while (age <= 0) {
 		cout << "Edad: ";
 		cin >> age;
@@ -61,13 +60,12 @@ void crearLibro() {
 void Ingresar(string u, string c) {
 	for (Usuario usuario : usuarios) {
 		if (u == usuario.getUser() && c == usuario.getPassword()) {
-			cout << "Bienvenido " << usuario.getName();
+			cout << "Bienvenido " << usuario.getName() << endl;
 			actual = usuario;
 			valid = true;
 			cout << "\n";
 		}
-	}
-			
+	}		
 }
 
 void listarLibros() {
@@ -109,6 +107,7 @@ void modLibro() {
 void MenuAdmin() {
 	int opcion2;
 	do {
+		valid = false;
 		cout << "0. Salir\n1. Agregar Libro\n2. Modificar Libro\n3. Eliminar Libro\n4. Borrar Registro de Libros\nSu opción: ";
 		cin >> opcion2;
 		switch (opcion2) {
@@ -220,7 +219,12 @@ void MenuOtro() {
 					cout << "Contraseña Reestablecida" << endl;
 				} break;
 			case 6: {
-					
+					/*for (int i = 0; i <= cont_u; i++) {
+						if ( i + 1 <= cont_u) {
+							usuarios[i] = usuarios[i + 1];
+						}
+					}
+					cont_u--;*/
 				} break;
 			default:
 				cout << "Debe ingresar una opción presentada" << endl;
