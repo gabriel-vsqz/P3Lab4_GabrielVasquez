@@ -206,6 +206,7 @@ void MenuOtro() {
 					cout << "¿Cuánto dinero desea agregar? ";
 					cin >> deposit;
 					actual.setMoney(deposit + actual.getMoney());
+					cout << "Depósito Exitoso" << endl;
 				} break;
 			case 5: {
 					string lastp, npass;
@@ -216,9 +217,10 @@ void MenuOtro() {
 						cin >> npass;
 						actual.setPassword(npass);
 					}
+					cout << "Contraseña Reestablecida" << endl;
 				} break;
 			case 6: {
-
+					
 				} break;
 			default:
 				cout << "Debe ingresar una opción presentada" << endl;
