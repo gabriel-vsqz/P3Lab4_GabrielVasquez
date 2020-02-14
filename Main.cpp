@@ -167,6 +167,12 @@ void MenuOtro() {
 		switch (opcion3) {
 			case 1: {
 					listarLibros();
+					int pos4;
+					cout << "¿Qué libro desea comprar? ";
+					if (actual.getMoney() > libros[pos4-1].getPrice()) {
+						libros[pos4-1].setState("Vendido");
+						actual.setMoney(actual.getMoney() - libros[pos4-1].getPrice());
+					}
 				} break;
 			case 2: {
 					string search;
@@ -201,6 +207,17 @@ void MenuOtro() {
 					actual.setMoney(deposit + actual.getMoney());
 				} break;
 			case 5: {
+					string lastp, npass;
+					cout << "Ingrese su contraseña actual: ";
+					cin >> lastp;
+					if (actual.getPassword() == lastp) {
+						cout << "Nueva contraseña: ";
+						cin >> npass;
+						actual.setPassword(npass);
+					}
+				} break;
+			case 6: {
+
 				} break;
 			default:
 				cout << "Debe ingresar una opción presentada" << endl;
