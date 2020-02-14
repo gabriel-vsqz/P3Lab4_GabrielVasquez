@@ -70,11 +70,13 @@ void Ingresar(string u, string c) {
 
 void listarLibros() {
 	int counter = 1;
-	for (Libro libro : libros) {
-		cout << "Libro " << counter << "\nTítulo: " << libro.getTitle();
-		cout << "\nAño de Publicación: " << libro.getYear() << "\nAño de Publicación: " << libro.getYear();
-		cout << "\nPrecio: " << libro.getPrice() << "\nEstado: " << libro.getState();
-		counter++;
+	for (int i = 0; i < libros.size(); i++) {
+		if (libros[i].getTitle() != "") {
+			cout << "Libro " << counter << "\nTítulo: " << libros[i].getTitle();
+                	cout << "\nAutor: " << libros[i].getAuthor() << "\nAño de Publicación: " << libros[i].getYear();
+                	cout << "\nPrecio: " << libros[i].getPrice() << "\nEstado: " << libros[i].getState() << endl;
+                	counter++;
+		}
 	}
 }
 
@@ -108,7 +110,7 @@ void MenuAdmin() {
 	int opcion2;
 	do {
 		valid = false;
-		cout << "0. Salir\n1. Agregar Libro\n2. Modificar Libro\n3. Eliminar Libro\n4. Borrar Registro de Libros\nSu opción: ";
+		cout << "\n0. Salir\n1. Agregar Libro\n2. Modificar Libro\n3. Eliminar Libro\n4. Borrar Registro de Libros\nSu opción: ";
 		cin >> opcion2;
 		switch (opcion2) {
 			case 1: {
@@ -126,8 +128,8 @@ void MenuAdmin() {
 					cout << "\n¿En que posición está el libro que desea modificar? ";
 					cin >> pos;
 
-					if (pos > 0 && pos <= cont_l) {
-						este = libros.at(pos-1);
+					if (pos >= 0 && pos <= cont_l) {
+						este = libros.at(pos - 1);
 						modLibro();
 						cout << "Modificado exitosamente" << endl;
 					}
@@ -219,12 +221,10 @@ void MenuOtro() {
 					cout << "Contraseña Reestablecida" << endl;
 				} break;
 			case 6: {
-					/*for (int i = 0; i <= cont_u; i++) {
-						if ( i + 1 <= cont_u) {
-							usuarios[i] = usuarios[i + 1];
-						}
+					for (int i = 0; i < usuarios.size(); i++) {
+						usuarios[i]  = usuarios[i +1];
+						cont_u--;
 					}
-					cont_u--;*/
 				} break;
 			default:
 				cout << "Debe ingresar una opción presentada" << endl;
