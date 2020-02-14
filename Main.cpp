@@ -64,6 +64,7 @@ void Ingresar(string u, string c) {
 			cout << "Bienvenido " << usuario.getName();
 			actual = usuario;
 			valid = true;
+			cout << "\n";
 		}
 	}
 			
@@ -153,6 +154,8 @@ void MenuAdmin() {
 					libros = nuevosL;
 					cout << "Se han borrado los libros" << endl;
 				} break;
+			default:
+				cout << "Debe ingresar una opción presentada" << endl;
 		}
 	} while (opcion2 != 0);
 }
@@ -165,6 +168,42 @@ void MenuOtro() {
 			case 1: {
 					listarLibros();
 				} break;
+			case 2: {
+					string search;
+					cout << "Búsqueda por Autor" << endl;
+					cout << "¿Qué autor busca? ";
+					cin >> search;
+					int cont = 1;
+					for (Libro libro : libros) {
+						if (search == libro.getAuthor()) {
+							cout << cont << libro.getTitle() << endl;
+							cont++;
+						}
+					}
+				} break;
+			case 3: {
+					string search;
+                                        cout << "Búsqueda por Título" << endl;
+                                        cout << "¿Qué título busca? ";
+                                        cin >> search;
+                                        int cont = 1;
+                                        for (Libro libro : libros) {
+                                                if (search == libro.getTitle()) {
+                                                        cout << cont << libro.getTitle() << endl;
+                                                        cont++;
+                                                }
+                                        }
+				} break;
+			case 4: {
+					int deposit;
+					cout << "¿Cuánto dinero desea agregar? ";
+					cin >> deposit;
+					actual.setMoney(deposit + actual.getMoney());
+				} break;
+			case 5: {
+				} break;
+			default:
+				cout << "Debe ingresar una opción presentada" << endl;
 		}
 	} while (opcion3 != 0);
 }
