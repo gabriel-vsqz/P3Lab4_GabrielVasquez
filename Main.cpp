@@ -163,7 +163,7 @@ void MenuAdmin() {
 void MenuOtro() {
 	int opcion3;
 	do {
-		cout << "0. Salir\n1. Comprar Libro\n2. Buscar por Autor\n3. Buscar por Título\n4. Agregar Dinero a mi Cuenta\n5. Restablecer Contraseña\n6. Borrar Cuenta\nSu Opción: ";
+		cout << "\n0. Salir\n1. Comprar Libro\n2. Buscar por Autor\n3. Buscar por Título\n4. Agregar Dinero a mi Cuenta\n5. Restablecer Contraseña\n6. Borrar Cuenta\nSu Opción: ";
 		cin >> opcion3;
 		switch (opcion3) {
 			case 1: {
@@ -254,6 +254,7 @@ int main(){
 					cout << "Contraseña: ";
 					cin >> c;
 					Ingresar(u, c);
+					cout << "\n";
 					if (valid == true && actual.getUser() == "n.duron") {
 						MenuAdmin();
 					} else if (valid == true) {
