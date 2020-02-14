@@ -12,31 +12,31 @@ class Usuario {
 		Usuario();
 		Usuario(string u, string p, string n, int a, double m);
 		void setUser (string u) {
-			u = user;
+			user = u;
 		};
                 string getUser() {
                         return user;
                 };
 		void setPassword (string p) {
-			p = password;
+			password = p;
 		};
                 string getPassword() {
                         return password;
                 };
 		void setName (string n) {
-			n = name;
+			name = n;
 		};
  		string getName() {
                         return name;
                 };
 		void setAge (int a) {
-			a = age;
+			age = a;
 		};
                 int getAge() {
                         return age;
                 };
 		void setMoney (double m) {
-			m = money;
+			money = m;
 		};
                 double getMoney() {
                         return money;

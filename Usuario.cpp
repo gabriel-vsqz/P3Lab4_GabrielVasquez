@@ -8,9 +8,9 @@ Usuario :: Usuario() {
 }
 
 Usuario :: Usuario(string u, string p, string n, int a, double m) {
-	u = user;
-	p = password;
-	n = name;
-	a = age;
-	m = money;
+	user = u;
+	password = p;
+	name = n;
+	age = a;
+	money = m;
 }

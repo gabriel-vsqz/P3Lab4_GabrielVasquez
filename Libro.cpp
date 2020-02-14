@@ -7,10 +7,10 @@ using namespace std;
 Libro :: Libro() {
 }
 
-Libro :: Libro(string t, string a, string s, int y, double p) {
-	t = title;
-	a = author;
-	s = state;
-	y = year;
-	p = price;
+Libro :: Libro(string t, string a, int y, double p, string s) {
+	title = t;
+	author = a;
+	year = y;
+	price = p;
+	state = s;
 }

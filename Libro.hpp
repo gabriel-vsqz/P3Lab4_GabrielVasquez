@@ -11,33 +11,33 @@ class Libro {
                 double price;
         public:
                 Libro();
-                Libro(string t, string a, string s, int y, double p);
+                Libro(string t, string a, int y, double p, string state);
                 void setTitle (string t) {
-                        t = title;
+   			title = t;
                 };
                 string getTitle() {
                         return title;
                 };
                 void setAuthor (string a) {
-                        a = author;
+                        author = a;
                 };
                 string getAuthor() {
                         return author;
                 };
                 void setState (string s) {
-                        s = state;
+                        state = s;
                 };
                 string getState() {
                         return state;
                 };
                 void setYear (int y) {
-                        y = year;
+                        year = y;
                 };
                 int getYear() {
                         return year;
                 };
                 void setPrice (double p) {
-                        p = price;
+                        price = p;
                 };
                 double getPrice() {
                         return price;
